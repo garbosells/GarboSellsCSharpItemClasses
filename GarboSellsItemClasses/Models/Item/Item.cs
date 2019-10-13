@@ -60,24 +60,6 @@ namespace GarboSellsItemClasses.Models
         /// </summary>
         public long? id { get; set; }
         /// <summary>
-        /// This field will become the title of the listing once it is posted to Ebay/Etsy.
-        ///
-        /// <setby>The user in the frontend Android app.</setby>
-        /// <setwhen>Creating an item in the Android app.</setwhen>
-        /// <modifywhen>Editing an item in the Android app.</modifywhen>
-        /// <modifiedby>The user.</modifiedby>
-        /// </summary>
-        public string shortDescription { get; set; }
-        /// <summary>
-        /// This field will become the text body of the listing once it is posted to Ebay/Etsy.
-        ///
-        /// <setby>The user in the frontend Android app.</setby>
-        /// <setwhen>Creating an item in the Android app.</setwhen>
-        /// <modifywhen>Editing an item in the Android app.</modifywhen>
-        /// <modifiedby>The user.</modifiedby>
-        /// </summary>
-        public string longDescription { get; set; }
-        /// <summary>
         /// The ID of the category that the item belongs to.
         ///
         /// <setby>The Android app on item creation (the Category is set by the user, the ID is saved).</setby>
@@ -95,6 +77,24 @@ namespace GarboSellsItemClasses.Models
         /// <modifiedby>No one.</modifiedby>
         /// </summary>
         public long subcategoryId { get; set; }
+        /// <summary>
+        /// This field will become the title of the listing once it is posted to Ebay/Etsy.
+        ///
+        /// <setby>The user in the frontend Android app.</setby>
+        /// <setwhen>Creating an item in the Android app.</setwhen>
+        /// <modifywhen>Editing an item in the Android app.</modifywhen>
+        /// <modifiedby>The user.</modifiedby>
+        /// </summary>
+        public string shortDescription { get; set; }
+        /// <summary>
+        /// This field will become the text body of the listing once it is posted to Ebay/Etsy.
+        ///
+        /// <setby>The user in the frontend Android app.</setby>
+        /// <setwhen>Creating an item in the Android app.</setwhen>
+        /// <modifywhen>Editing an item in the Android app.</modifywhen>
+        /// <modifiedby>The user.</modifiedby>
+        /// </summary>
+        public string longDescription { get; set; }
         /// <summary>
         /// NOT IN USE.
         /// Extended feature that may be implemented after basic functionality exists.
@@ -123,15 +123,6 @@ namespace GarboSellsItemClasses.Models
         /// </summary>
         public ItemSize size { get; set; }
         /// <summary>
-        /// A set of attributes that generally applies to all items, regardless of subcategory.
-        ///
-        /// <setby>The user when completing the item creation wizard.</setby>
-        /// <setwhen>Creating an item in the Android app.</setwhen>
-        /// <modifywhen>Saving an existing item.</modifywhen>
-        /// <modifiedby>The user.</modifiedby>
-        /// </summary>
-        public GeneralItemAttributes generalItemAttributes { get; set; }
-        /// <summary>
         /// A set of attributes that apply to the particular subcategory selected. A given subcategory may have 0 or more of these.
         ///
         /// <setby>The user when completing the item creation wizard.</setby>
@@ -140,6 +131,15 @@ namespace GarboSellsItemClasses.Models
         /// <modifiedby>The user.</modifiedby>
         /// </summary>
         public List<ItemAttribute> attributes;
+        /// <summary>
+        /// A set of attributes that generally applies to all items, regardless of subcategory.
+        ///
+        /// <setby>The user when completing the item creation wizard.</setby>
+        /// <setwhen>Creating an item in the Android app.</setwhen>
+        /// <modifywhen>Saving an existing item.</modifywhen>
+        /// <modifiedby>The user.</modifiedby>
+        /// </summary>
+        public GeneralItemAttributes generalItemAttributes { get; set; }
         /// <summary>
         /// Default constructor to initialize fields.
         /// </summary>
